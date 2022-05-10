@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.html && cd server && npm run start"
+    "start": "index.html && cd server && npm install && npm run start"
   },
   "author": "",
   "license": "ISC"
