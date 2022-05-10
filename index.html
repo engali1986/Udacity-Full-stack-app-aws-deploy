@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="firstName" value="" type="text" style="width: 200px; height: 20px; display: inline-block;" placeholder="first name">
+    <input id="lastName" value="" type="text" style="width: 200px; height: 20px; display: inline-block;" placeholder="last name">
+    <input id="pass" type="password" style="width: 200px; height: 20px; display: inline-block;" placeholder="password">
+    <input  type="button" id="register" value="add"  style="width: 200px; height: 20px; display: inline-block;">
+    <p id="result" style="border: 2px solid black; width: 100vw; height: fit-content;">
+        
+    </p>
+
+    <p style="width: 100vw ; height: 5px; background-image: linear-gradient(to bottom,rgb(160, 217, 231), rgb(37, 103, 134),rgb(160, 217, 231));">
+    </p>
+
+    <button id="list" > list all users </button>
+    <p id="usersList" style="border: 2px solid black; width: 100vw; height: fit-content;">
+    </p> 
+
+    <script src="./index.js" >
+        // let firstName=document.getElementById("firstName")
+        // let lastName=document.getElementById("lastName")
+        // let passv=document.getElementById("pass")
+        // let btn=document.getElementById("register")
+
+        // btn.onclick= async ()=>{
+        //     if (firstName.value.length<1 || lastName.value.length<1 || passv.value.length<1) {
+        //        document.getElementById("result").innerText="complete data"
+        //        console.log(firstName.value.length)
+        //     } else {
+        //         let first_name=firstName.value
+        //         let last_name=lastName.value
+        //         let pass=passv.value
+                
+        //         await fetch("http://localhost:3000/api/users/create",{
+        //         method:"POST",
+        //         headers:{
+        //             "Content-Type":"application/json"
+        //         },
+        //         body:JSON.stringify({first_name,last_name,pass})
+                
+        //     },
+            
+            
+        //     ).then(res=>{
+        //         return res.json()
+        //     }).then(data=>{
+        //        if (data.massage="User Added") {
+        //            document.getElementById("result").innerText=data.massage
+                   
+        //        } else {
+        //         document.getElementById("result").innerText="user not added"
+        //        }
+        //     }).catch(err=>console.log("error"))
+        //     }
+           
+        // }
+        
+
+    </script>
+</body>
+</html>
