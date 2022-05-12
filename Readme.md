@@ -1,0 +1,1 @@
+to upload frontend to s3 aws s3 cp --recursive ./frontend s3://full-stack-ali-1/
