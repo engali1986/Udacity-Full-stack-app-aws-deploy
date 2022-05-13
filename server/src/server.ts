@@ -63,7 +63,7 @@ app.use((err: Error, req: express.Request, res: express.Response) => {
   } else {
   }
 });
-app.listen(process.env.port, () => {
+app.listen(process.env.PORT, () => {
   console.log("Running");
 });
 
