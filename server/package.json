@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "1- install dependencies (npm install express nodemon pg )\r 2- install dev dependencies ( npm install --save -dev eslint typescript prettier jsamine jsamine-spec-reporter supertest\r  @types/node @types/express @types/jasmine)",
   "main": "build/server.js",
+  "engines": {
+    "node": ">=12"
+},
   "scripts": {
     "test": "set NODE_ENV=test&&npx db-migrate up -e test&&npm run build&&jasmine&&npx db-migrate reset -e test ",
     "build": "tsc && npx db-migrate reset -e dev && npx db-migrate up -e dev",

@@ -13,7 +13,7 @@ btn.onclick= async ()=>{
         let last_name=lastName.value
         let pass=passv.value
         
-        await fetch("http://localhost:3000/api/users/create",{
+        await fetch("http://fullstackali16-env.eba-uh9ap64r.us-east-1.elasticbeanstalk.com//api/users/create",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
@@ -38,7 +38,7 @@ btn.onclick= async ()=>{
 }
 
 listBtn.onclick=async()=>{
-    await fetch("http://localhost:3000/api/users",{
+    await fetch("http://fullstackali16-env.eba-uh9ap64r.us-east-1.elasticbeanstalk.com//api/users",{
         method:"GET"
     })
     .then((res)=>{

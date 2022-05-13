@@ -14,11 +14,11 @@ if (process.env.NODE_ENV == "test") {
 }
 
 const pool = new Pool({
-  host: process.env.postgres_host,
+  host: process.env.POSTGRE_HOST,
   database: database,
-  user: process.env.postgres_user,
-  password: process.env.postgres_pass,
-  port: parseInt(process.env.postgres_port as string, 10),
+  user: process.env.POSTGRES_USER,
+  password: process.env.POSTGRES_PASS,
+  port: parseInt(process.env.POSTGRES_PORT as string, 10),
 });
 pool.on("error", (error: Error) => {
   console.error(error.message);
