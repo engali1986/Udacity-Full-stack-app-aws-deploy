@@ -3,6 +3,7 @@ let lastName=document.getElementById("lastName")
 let passv=document.getElementById("pass")
 let btn=document.getElementById("register")
 let listBtn=document.getElementById("list")
+let testBtn=document.getElementById("test")
 
 btn.onclick= async ()=>{
     if (firstName.value.length<1 || lastName.value.length<1 || passv.value.length<1) {
@@ -13,11 +14,13 @@ btn.onclick= async ()=>{
         let last_name=lastName.value
         let pass=passv.value
         
-        await fetch("http://fullstackali16-env.eba-uh9ap64r.us-east-1.elasticbeanstalk.com//api/users/create",{
+        await fetch("http://fullstackali16-env.eba-uh9ap64r.us-east-1.elasticbeanstalk.com/api/users/create",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
         },
+        mode:"CORS",
+        
         body:JSON.stringify({first_name,last_name,pass})
         
     },
@@ -38,15 +41,31 @@ btn.onclick= async ()=>{
 }
 
 listBtn.onclick=async()=>{
-    await fetch("http://fullstackali16-env.eba-uh9ap64r.us-east-1.elasticbeanstalk.com//api/users",{
+    await fetch("http://fullstackali16-env.eba-uh9ap64r.us-east-1.elasticbeanstalk.com/api/users",{
         method:"GET"
     })
     .then((res)=>{
         return res.json()
     })
     .then((listed)=>{
-        document.getElementById("usersList").innerText=JSON.stringify(listed.userslist)
+        document.getElementById("usersList").innerText=listed.userslist
         console.log(listed.userslist)
+    })
+    .catch(erro=>{
+        console.log(erro)
+    })
+}
+
+testBtn.onclick=async()=>{
+    await fetch("http://fullstackali16-env.eba-uh9ap64r.us-east-1.elasticbeanstalk.com/test",{
+        method:"GET"
+    })
+    .then((res)=>{
+        return res.text()
+    })
+    .then((testR)=>{
+        document.getElementById("testResult").innerText=testR+" Server online"
+        console.log(testR)
     })
     .catch(erro=>{
         console.log(erro)

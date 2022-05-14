@@ -23,9 +23,11 @@ app.use(express.json());
 //   })
 // );
 app.use(
-  cors({
+  cors(
+    {
     origin: "*",
-  })
+  }
+  )
 );
 app.use("/api/users", usersRoute); // main users route
 
