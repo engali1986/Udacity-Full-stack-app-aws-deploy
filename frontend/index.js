@@ -21,6 +21,7 @@ btn.onclick= async ()=>{
         },
         // mode:"CORS",
         
+        
         body:JSON.stringify({first_name,last_name,pass})
         
     },
