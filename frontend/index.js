@@ -19,7 +19,7 @@ btn.onclick= async ()=>{
         headers:{
             "Content-Type":"application/json"
         },
-        mode:"CORS",
+        // mode:"CORS",
         
         body:JSON.stringify({first_name,last_name,pass})
         
@@ -30,12 +30,12 @@ btn.onclick= async ()=>{
         return res.json()
     }).then(data=>{
        if (data.massage="User Added") {
-           document.getElementById("result").innerText=data.massage
+           document.getElementById("result").innerText=JSON.stringify(data.massage)
            
        } else {
         document.getElementById("result").innerText="user not added"
        }
-    }).catch(err=>console.log("error"))
+    }).catch(err=>console.log(err))
     }
    
 }
@@ -48,7 +48,7 @@ listBtn.onclick=async()=>{
         return res.json()
     })
     .then((listed)=>{
-        document.getElementById("usersList").innerText=listed.userslist
+        document.getElementById("usersList").innerText=JSON.stringify(listed.userslist)
         console.log(listed.userslist)
     })
     .catch(erro=>{
