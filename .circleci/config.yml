@@ -23,8 +23,12 @@ jobs:
           name: Install Backend dependencies
           command: npm run Backend-install
       - run:
-          name: Install Backend1 dependencies
-          command: npm run Backend-install
+          name: Test backend server
+          command: npm run Backend-test
+      - run:
+          name: Test backend build
+          command: npm run Backend-build
+
      
 workflows:
   build-deploy:
