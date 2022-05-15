@@ -4,6 +4,11 @@
   "description": "",
   "main": "index.html",
   "scripts": {
+    "Backend-install": "cd server && npm install && npm install del-cli ",
+    "Backend-test": "cd server && npm run test ",
+    "Backend-Build": "cd server && npm run build",
+    
+
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd frontend && index.html && cd .. && cd server && npm install && npm run build && npm run start"
   },

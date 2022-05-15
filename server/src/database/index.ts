@@ -14,7 +14,7 @@ if (process.env.NODE_ENV == "test") {
 }
 
 const pool = new Pool({
-  host: process.env.POSTGRE_HOST,
+  host: process.env.POSTGRES_HOST,
   database: database,
   user: process.env.POSTGRES_USER,
   password: process.env.POSTGRES_PASS,

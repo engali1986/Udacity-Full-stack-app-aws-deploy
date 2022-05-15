@@ -2,13 +2,13 @@
   "name": "project-2--storefront-api-rev0",
   "version": "1.0.0",
   "description": "1- install dependencies (npm install express nodemon pg )\r 2- install dev dependencies ( npm install --save -dev eslint typescript prettier jsamine jsamine-spec-reporter supertest\r  @types/node @types/express @types/jasmine)",
-  "main": "build/server.js",
+  "main": "server.js",
   "engines": {
     "node": ">=12"
-},
+  },
   "scripts": {
-    "test": "set NODE_ENV=test&&npx db-migrate up -e test&&npm run build&&jasmine&&npx db-migrate reset -e test ",
-    "build": "tsc && npx db-migrate reset -e dev && npx db-migrate up -e dev",
+    "test": "set NODE_ENV=test&&npx db-migrate up -e test&&npm run build&&jasmine&&npx db-migrate reset -e test && del-cli --force ./build ",
+    "build": "tsc && npx db-migrate reset -e dev && npx db-migrate up -e dev && @powershell copy 'package.json' './build'",
     "start": "  node ./build/server.js",
     "prettier": "prettier --write ./src/**/*.ts",
     "lint": "eslint ./src/**/*.ts"
@@ -20,6 +20,7 @@
     "cors": "^2.8.5",
     "db-migrate": "^0.11.13",
     "db-migrate-pg": "^1.2.2",
+    "del-cli": "^4.0.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-rate-limit": "^6.3.0",
