@@ -18,31 +18,11 @@ jobs:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           aws-region: AWS_DEFAULT_REGION
    
-      - run:
-          name: Install Frontend  dependencies
-          command: yarn fe-install
+      
       - run:
           name: Install Backend dependencies
-          command: yarn be-install
-      - run:
-          name: Frontend build
-          command: yarn fe-build
-      - run:
-          name: Backend build
-          command: yarn be-build
-      - run:
-          name: Frontend test
-          command: yarn fe-test
-      - run: 
-          name: Backend test
-          command: yarn be-test
-      - run:
-          name: Frontend deploy
-          command: yarn fe-deploy
-      - run:
-          name: Backend deploy
-          command: yarn be-deploy
-
+          command: npm run Backend-install
+     
 workflows:
   build-deploy:
     jobs:
