@@ -7,6 +7,7 @@
     "Backend-install": "cd server && npm install && npm install del-cli ",
     "Backend-test": "cd server && npm run test ",
     "Backend-Build": "cd server && npm run build",
+    "Frontend-Deploy":"aws s3 cp --recursive ./frontend s3://full-stack-ali-2/",
     
 
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -26,8 +26,11 @@ jobs:
           name: Test backend server
           command: npm run Backend-test
       - run:
-          name: Test backend build
+          name: backend build
           command: npm run Backend-Build
+      - run:
+          name: Frontend deploy
+          command: npm run Frontend-Deploy
 
      
 workflows:
