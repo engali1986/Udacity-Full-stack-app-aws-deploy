@@ -8,7 +8,7 @@
     "Backend-test": "cd server && npm run test ",
     "Backend-Build": "cd server && npm run build",
     "Frontend-Deploy":"aws s3 cp --recursive ./frontend s3://full-stack-ali-2/",
-    "Backend-Deploy": "cd server/build && eb init full-stack-ali-2 -r $AWS_DEFAULT_REGION -p node.js && eb use fullstackali2-env &&  eb setenv POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB_DEV=$POSTGRES_DB_DEV POSTGRES_USER=$POSTGRES_USER POSTGRES_PASS=$POSTGRES_PASS BCRYPT_PASS=$BCRYPT_PASS TOKEN_SECRET=$TOKEN_SECRET SALT_ROUNDS=$SALT_ROUNDS NODE_ENV=$NODE_ENV && eb deploy",
+    "Backend-Deploy": "cd server/build && eb use fullstackali2-env &&  eb setenv POSTGRES_HOST=$POSTGRES_HOST POSTGRES_DB_DEV=$POSTGRES_DB_DEV POSTGRES_USER=$POSTGRES_USER POSTGRES_PASS=$POSTGRES_PASS BCRYPT_PASS=$BCRYPT_PASS TOKEN_SECRET=$TOKEN_SECRET SALT_ROUNDS=$SALT_ROUNDS NODE_ENV=$NODE_ENV && eb deploy",
     
 
     "test": "echo \"Error: no test specified\" && exit 1",
