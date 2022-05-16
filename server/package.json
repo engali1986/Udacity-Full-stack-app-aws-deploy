@@ -9,7 +9,7 @@
   "scripts": {
     "test": "set NODE_ENV=test&&npx db-migrate up -e test&&npm run build&&jasmine&&npx db-migrate reset -e test && del-cli --force ./build ",
     "build": "tsc && npx db-migrate reset -e dev && npx db-migrate up -e dev && cp package.json build/package.json ",
-    "start": "  node ./build/server.js",
+    "start": "  node server.js",
     "prettier": "prettier --write ./src/**/*.ts",
     "lint": "eslint ./src/**/*.ts"
   },
