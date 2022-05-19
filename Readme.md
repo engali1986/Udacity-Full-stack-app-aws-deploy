@@ -24,3 +24,5 @@ In this project we used the following AWS technologies to host the app
 
 then we used circleci and connect it to the project github repositori so any new version updated to the reposatory will automatically be reflected to the version deployed in the AWS 
 
+Thanks a lot
+
